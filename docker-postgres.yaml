@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: assessment_cc_next_sr_01
+    ports:
+      - 5432:5432

@@ -1,0 +1,22 @@
+@import '../../../../variables.scss';
+
+.startBattleButton {
+    border-radius: 5px !important;
+    box-shadow: $box-shadow-button;
+    pointer-events: visible !important;
+    height: 45px !important;
+  }
+  .typographyButton {
+    color: white !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
+    text-transform: capitalize !important;
+  }
+  .darkButton {
+    background-color: $button-background !important;
+  }
+  .lightButton {
+    background-color: $button-background-light !important;
+  }

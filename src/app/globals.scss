@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body,
+html {
+    margin: 0;
+}
+html {
+    width: 100%;
+}
+body {
+    background: $background-root;
+    height: calc(110vh - 69px);
+    max-height: 110vh;
+    padding: 63px;
+}

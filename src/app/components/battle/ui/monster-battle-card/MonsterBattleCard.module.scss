@@ -1,0 +1,25 @@
+@import '../../../../variables.scss';
+
+.battleCardPlayer {
+    padding: 13px 11px;
+    height: 415px;
+    flex-direction: column;
+    border-radius: 7px;
+    box-shadow: $box-shadow;
+}
+.centralized {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.position {
+    display: block;
+    align-items: auto;
+    justify-content: auto;
+}
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+}

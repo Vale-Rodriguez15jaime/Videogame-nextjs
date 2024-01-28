@@ -1,0 +1,20 @@
+@import "./_variables.scss";
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin: 0 auto;
+  max-width: 814px;
+}
+.battleSection {
+  display: grid;
+  align-items: center;
+  gap: 25px;
+  grid-template-columns: 1fr 150px 1fr;
+}
+.mainTitle {
+  font-style: normal;
+  font-weight: 400 !important;
+  font-size: 36px !important;
+}
