@@ -1,8 +1,11 @@
 import { store } from "@/store";
 import { ButtonStartBattle } from "./ButtonStartBattle";
 import { Provider } from "react-redux";
-import { render, screen } from "@testing-library/react";
-import { setSelectedMonster } from "@/reducers/monsters/monsters.actions";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import {
+  setSelectedComputerMonster,
+  setSelectedMonster,
+} from "@/reducers/monsters/monsters.actions";
 import monstersData from "../../../../../../data/monsters.json";
 
 const buttonStartBattleFactory = () => {
@@ -27,6 +30,21 @@ describe("ButtonStartBattle", () => {
   });
 
   it("should click the button to start the battle", async () => {
-    // @TODO
+    store.dispatch(setSelectedMonster(monstersData.monsters[0]));
+    store.dispatch(setSelectedComputerMonster(monstersData.monsters[1]));
+    buttonStartBattleFactory();
+    const buttonElement = screen.getByText("Start Battle");
+
+    fireEvent.click(buttonElement);
+
+    await waitFor(() => {
+      expect(buttonElement).toHaveTextContent("Reset game");
+    });
+
+    fireEvent.click(buttonElement);
+
+    await waitFor(() => {
+      expect(buttonElement).toHaveTextContent("Start Battle");
+    });
   });
 });
