@@ -5,8 +5,9 @@ import styles from "./MonstersList.module.scss";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { useAppDispatch } from "@/store/hooks";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
+  setListMonster,
   setSelectedMonster,
 } from "@/reducers/monsters/monsters.actions";
 
@@ -25,6 +26,16 @@ const MonstersList = ({ monsters }: MonstersListProps) => {
     setSelectedMonsterId(value);
     dispatch(setSelectedMonster(!value ? null : monster));
   };
+
+  const handleSaveMonsters = useCallback(() => {
+    dispatch(setListMonster(monsters));
+  }, [monsters, dispatch]);
+
+  useEffect(() => {
+    if (monsters) {
+      handleSaveMonsters();
+    }
+  }, [monsters, handleSaveMonsters]);
 
   return (
     <div>
