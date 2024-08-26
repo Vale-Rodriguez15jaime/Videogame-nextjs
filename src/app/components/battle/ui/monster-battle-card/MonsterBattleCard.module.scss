@@ -2,10 +2,11 @@
 
 .battleCardPlayer {
     padding: 13px 11px;
-    height: 415px;
+    height: 500px;
     flex-direction: column;
     border-radius: 7px;
     box-shadow: $box-shadow;
+    margin-bottom: 20px;
 }
 .centralized {
     display: flex !important;

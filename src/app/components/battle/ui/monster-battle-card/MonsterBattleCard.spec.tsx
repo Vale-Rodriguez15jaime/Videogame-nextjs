@@ -5,7 +5,11 @@ import { MonsterBattleCard } from "@/app/components/battle/ui/monster-battle-car
 
 describe("MonsterBattleCard", () => {
   it("should render the monster card correctly with a monster", async () => {
-    // @TODO
+    const monster = monstersData.monsters[0];
+    render(<MonsterBattleCard title={monster.name} monster={monster} />);
+
+    const titleElement = screen.getByText(monster.name);
+    expect(titleElement).toBeInTheDocument();
   });
 
   it("should render the card with a title when no monster is provided", () => {
