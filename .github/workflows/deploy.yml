@@ -32,7 +32,7 @@ jobs:
       - name: Create env variables
         run: |
           echo "${{ secrets.DATABASE_URL }}" >> .env
-          vercel env rm DATABASE_URL production --token=${{ secrets.VERCEL_TOKEN }}
+          vercel env rm DATABASE_URL production --yes --token=${{ secrets.VERCEL_TOKEN }}
           vercel env add DATABASE_URL production --sensitive --token=${{ secrets.VERCEL_TOKEN }} < .env
           rm .env
       - name: Pull Vercel Environment Information
