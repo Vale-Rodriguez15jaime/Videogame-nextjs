@@ -25,7 +25,8 @@ This project is about two monsters fighting and the winners depends about stast 
   npm run dev
 
 ## Web link
-[Link](https://videogame-nextjs-geh7knr0s-vale-rodriguezs-projects.vercel.app/)
+
+[Link](videogame-nextjs.vercel.app)
 
 
 ## Video about how I develop the features
