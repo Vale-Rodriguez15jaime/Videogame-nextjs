@@ -16,7 +16,9 @@ jobs:
       - name: Run prisma migrations
         run: npx prisma migrate deploy
       - name: Seed database
-        run: npm run seed
+        run: |
+          npm run prisma:generate
+          npm run seed
 
   deploy-to-vercel:
     needs: database-migrations
