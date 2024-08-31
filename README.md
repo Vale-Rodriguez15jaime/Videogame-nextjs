@@ -26,7 +26,7 @@ This project is about two monsters fighting and the winners depends about stast 
 
 ## Web link
 
-[Link](videogame-nextjs.vercel.app)
+[Link](https://videogame-nextjs.vercel.app)
 
 
 ## Video about how I develop the features
